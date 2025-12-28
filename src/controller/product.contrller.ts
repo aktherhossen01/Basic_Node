@@ -24,7 +24,14 @@ export const productController =async (req:IncomingMessage,res:ServerResponse)=>
         res.end(JSON.stringify({message:"bhai eita product", data:product}))
     }else if(method === "POST" && url==='/products'){
         const body = await parseBody(req)
-        console.log(body);
+        const products = readProduct()
+
+        const newProduct ={
+            id:Date.now();
+            ...body,
+        };
+        products.push(newProduct)
+        
         
     }
 
