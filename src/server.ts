@@ -2,7 +2,7 @@ import { createServer, Server } from "http";
 import { productRoute } from "./routes/product.routes";
 
 const server:Server= createServer((req,res)=>{
-    productRoute(req,res);
+    productRoute(req,res)
     
 })
 server.listen(5000,()=>{

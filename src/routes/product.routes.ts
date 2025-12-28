@@ -2,7 +2,7 @@ import { IncomingMessage, ServerResponse } from "http";
 import { productController } from "../controller/product.contrller";
 
 export const productRoute = (req:IncomingMessage, res:ServerResponse)=>{
-    console.log(req.url);
+    // console.log(req.url);
 
     const url = req.url
     const method = req.method
